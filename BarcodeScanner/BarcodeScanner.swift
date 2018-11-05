@@ -6,6 +6,13 @@
 //  Copyright © 2018 Michal Moskala. All rights reserved.
 //
 
-class BarcodeScanner {
+import UIKit
 
+class BarcodeScanner {
+    
+    enum Error {
+        case noCamera
+        case cameraUsageDanied
+        case cameraUsageNotAuthorized
+    }
 }

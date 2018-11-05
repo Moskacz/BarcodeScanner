@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		354E7DE9218DC9BF0076B4AE /* BarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E7DE8218DC9BF0076B4AE /* BarcodeScanner.swift */; };
+		3567D4792190C50600E6D316 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3567D4782190C50600E6D316 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		354E7DE5218DC9BF0076B4AE /* libBarcodeScanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBarcodeScanner.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		354E7DE8218DC9BF0076B4AE /* BarcodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScanner.swift; sourceTree = "<group>"; };
+		3567D4782190C50600E6D316 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3567D4792190C50600E6D316 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +46,7 @@
 			children = (
 				354E7DE7218DC9BF0076B4AE /* BarcodeScanner */,
 				354E7DE6218DC9BF0076B4AE /* Products */,
+				3567D4772190C50600E6D316 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +64,14 @@
 				354E7DE8218DC9BF0076B4AE /* BarcodeScanner.swift */,
 			);
 			path = BarcodeScanner;
+			sourceTree = "<group>";
+		};
+		3567D4772190C50600E6D316 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3567D4782190C50600E6D316 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
