@@ -10,7 +10,21 @@
 		354E7DE9218DC9BF0076B4AE /* BarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E7DE8218DC9BF0076B4AE /* BarcodeScanner.swift */; };
 		3567D4792190C50600E6D316 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3567D4782190C50600E6D316 /* QuartzCore.framework */; };
 		3567D47B2190C7EC00E6D316 /* CameraAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3567D47A2190C7EC00E6D316 /* CameraAuthorization.swift */; };
+		3567D4852190CB1A00E6D316 /* libBarcodeScanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 354E7DE5218DC9BF0076B4AE /* libBarcodeScanner.a */; };
+		3567D48C2190CB8000E6D316 /* BarcodeScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3567D48B2190CB8000E6D316 /* BarcodeScannerTests.swift */; };
+		3567D48D2190CB8800E6D316 /* BarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E7DE8218DC9BF0076B4AE /* BarcodeScanner.swift */; };
+		3567D48E2190CB8B00E6D316 /* CameraAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3567D47A2190C7EC00E6D316 /* CameraAuthorization.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3567D4862190CB1A00E6D316 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 354E7DDD218DC9BF0076B4AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 354E7DE4218DC9BF0076B4AE;
+			remoteInfo = BarcodeScanner;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		354E7DE3218DC9BF0076B4AE /* CopyFiles */ = {
@@ -29,6 +43,9 @@
 		354E7DE8218DC9BF0076B4AE /* BarcodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScanner.swift; sourceTree = "<group>"; };
 		3567D4782190C50600E6D316 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3567D47A2190C7EC00E6D316 /* CameraAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAuthorization.swift; sourceTree = "<group>"; };
+		3567D4802190CB1A00E6D316 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3567D4842190CB1A00E6D316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3567D48B2190CB8000E6D316 /* BarcodeScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +57,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3567D47D2190CB1A00E6D316 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3567D4852190CB1A00E6D316 /* libBarcodeScanner.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -47,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				354E7DE7218DC9BF0076B4AE /* BarcodeScanner */,
+				3567D4812190CB1A00E6D316 /* UnitTests */,
 				354E7DE6218DC9BF0076B4AE /* Products */,
 				3567D4772190C50600E6D316 /* Frameworks */,
 			);
@@ -56,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				354E7DE5218DC9BF0076B4AE /* libBarcodeScanner.a */,
+				3567D4802190CB1A00E6D316 /* UnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +102,15 @@
 				3567D4782190C50600E6D316 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3567D4812190CB1A00E6D316 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				3567D4842190CB1A00E6D316 /* Info.plist */,
+				3567D48B2190CB8000E6D316 /* BarcodeScannerTests.swift */,
+			);
+			path = UnitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +133,24 @@
 			productReference = 354E7DE5218DC9BF0076B4AE /* libBarcodeScanner.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		3567D47F2190CB1A00E6D316 /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3567D4882190CB1A00E6D316 /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				3567D47C2190CB1A00E6D316 /* Sources */,
+				3567D47D2190CB1A00E6D316 /* Frameworks */,
+				3567D47E2190CB1A00E6D316 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3567D4872190CB1A00E6D316 /* PBXTargetDependency */,
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = 3567D4802190CB1A00E6D316 /* UnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -108,6 +162,9 @@
 				ORGANIZATIONNAME = "Michal Moskala";
 				TargetAttributes = {
 					354E7DE4218DC9BF0076B4AE = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					3567D47F2190CB1A00E6D316 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -125,9 +182,20 @@
 			projectRoot = "";
 			targets = (
 				354E7DE4218DC9BF0076B4AE /* BarcodeScanner */,
+				3567D47F2190CB1A00E6D316 /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3567D47E2190CB1A00E6D316 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		354E7DE1218DC9BF0076B4AE /* Sources */ = {
@@ -139,7 +207,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3567D47C2190CB1A00E6D316 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3567D48D2190CB8800E6D316 /* BarcodeScanner.swift in Sources */,
+				3567D48E2190CB8B00E6D316 /* CameraAuthorization.swift in Sources */,
+				3567D48C2190CB8000E6D316 /* BarcodeScannerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3567D4872190CB1A00E6D316 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 354E7DE4218DC9BF0076B4AE /* BarcodeScanner */;
+			targetProxy = 3567D4862190CB1A00E6D316 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		354E7DEA218DC9BF0076B4AE /* Debug */ = {
@@ -284,6 +370,42 @@
 			};
 			name = Release;
 		};
+		3567D4892190CB1A00E6D316 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R77HUFLYN8;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = michal.moskala.UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3567D48A2190CB1A00E6D316 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R77HUFLYN8;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = michal.moskala.UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -301,6 +423,15 @@
 			buildConfigurations = (
 				354E7DED218DC9BF0076B4AE /* Debug */,
 				354E7DEE218DC9BF0076B4AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3567D4882190CB1A00E6D316 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3567D4892190CB1A00E6D316 /* Debug */,
+				3567D48A2190CB1A00E6D316 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
