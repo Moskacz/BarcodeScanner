@@ -11,21 +11,28 @@ import AVFoundation
 
 class BarcodeScanner {
     
+    private let cameraAuthorization: CameraAuthorization.Type
+    
+    init(cameraAuthorization: CameraAuthorization.Type) {
+        self.cameraAuthorization = cameraAuthorization
+    }
+    
     enum Error {
         case noCamera
         case cameraUsageDanied
         case cameraUsageNotAuthorized
     }
     
-    static func askForCameraPermissions(completion: @escaping (Bool) -> Void) {
-        let authorizationStatus = AVCaptureDevice.authorizationStatus(for: .video)
+    func askForCameraPermissions(completion: @escaping (Bool) -> Void) {
+        let authorizationStatus = cameraAuthorization.cameraAuthorizationStatus
+        
         switch authorizationStatus {
         case .authorized:
             completion(true)
         case .restricted, .denied:
             completion(false)
         case .notDetermined:
-            AVCaptureDevice.requestAccess(for: .video, completionHandler: completion)
+            cameraAuthorization.requestCameraAccess(completion: completion)
         }
     }
 }
